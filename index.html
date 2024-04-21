@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/parakeet/96/hand-scissors.png" alt="hand-scissors">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>URL Shortener</h1>
+        <form id="shortenForm" action="shorten.php" method="post" onsubmit="return validateForm()">
+            <input id="longUrlInput" type="url" name="long_url" placeholder="Enter Long URL" required>
+            <span id="urlError" class="error"></span>
+            <button type="submit">Shorten</button>
+        </form>
+        <br>
+        <div id="shortenedUrlContainer" style="display: none;">
+            <input id="shortenedUrlInput" type="text" readonly style="font-family: 'Trebuchet MS', sans-serif; font-size: medium;">
+            <button onclick="copyToClipboard()">Copy</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
